@@ -9,7 +9,8 @@ export default {
       colors:{
         primary:"#001F3F",
         secondary:"#FFD700",
-        label:"#F2F2F2"
+        label:"#F2F2F2",
+        secondaryButton:"#03A9F4"
 
       },
     },
