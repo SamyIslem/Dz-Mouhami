@@ -6,6 +6,10 @@
   --max-width: 1140px;
 }
 
+body{
+  background-color: #001F3F;
+}
+
 .c-container {
   max-width: min(90%, var(--max-width));
   margin-inline: auto;
@@ -18,6 +22,3 @@
   max-inline-size: 60ch;
   /* text-wrap: balance; */
 }
-
-
-

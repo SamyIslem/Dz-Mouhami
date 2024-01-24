@@ -24,7 +24,7 @@ const resources = {
       contactButton: "Contactez nous",
       lawyerButton: "Découvrir nos avocats",
       experience: "Experience",
-      experiencText:
+      experienceText:
         "Explorez notre site pour découvrir des avocats adaptés à tous les budgets, car la justice devrait être accessible à chacun.",
       security: "Sécurité",
       securityText:
@@ -35,6 +35,18 @@ const resources = {
       fast: "Rapidité",
       fastText:
         "Trouvez rapidement l'avocat proche de vous, car notre engagement pour votre satisfaction demeure constant et inébranlable.",
+      trouver: "Trouvez votre",
+      avocat: "Avocat",
+      searchLawyer:
+        "Découvrez une recherche juridique simplifiée et personnalisée avec notre plateforme, trouvez l'avocat qui correspond à vos besoins spécifiques en quelques clics seulement.",
+      searchLawyerkeyWord: "Recherche par mot clé",
+      Budget: "Budget",
+      Localisation: "Localisation",
+      Speciality: "Spécialité",
+      Language: "Langue",
+      Search: "Rechercher",
+      Our: "Nos",
+      recommandations: "recommandations",
     },
     dir: "ltr",
   },
@@ -68,9 +80,21 @@ const resources = {
       justice: "عدالة",
       justiceText:
         "استكشف المحامين من كافة التخصصات، لتلبية احتياجاتك الخاصة بكفاءة والتزام مهني",
-        fast: "سرعة",
+      fast: "سرعة",
       fastText:
         "اعثر بسرعة على المحامي القريب منك، لأن التزامنا بإرضائك يظل ثابتًا وثابتًا.",
+      trouver: "ابحث عن",
+      avocat: "محاميك",
+      searchLawyer:
+        "اكتشف بحثًا قانونيًا مبسطًا وشخصيًا من خلال منصتنا، واعثر على المحامي الذي يلبي احتياجاتك المحددة ببضع نقرات فقط.",
+      searchLawyerkeyWord: "بحث بكلمة مفتاحية",
+      Budget: "ميزانية",
+      Localisation: "موقع",
+      Speciality: "تخصص",
+      Language: "لغة",
+      Search: "بحث",
+      Our: "توصياتنا ",
+      recommandations: "لك",
     },
     dir: "rtl",
   },
