@@ -1,5 +1,5 @@
 import React from 'react'
-import { Navbar } from '@/components/website'
+import { Navbar, Footer  } from '@/components/website'
 import { Outlet } from 'react-router-dom'
 
 const DefaultLayouts = () => {
@@ -7,6 +7,7 @@ const DefaultLayouts = () => {
     <>
     <Navbar/>
     <Outlet/>
+    <Footer/>
       
     </>
   )

@@ -4,11 +4,13 @@ import { useTranslation } from "react-i18next";
 import MainImage from "@/images/mainImage.png";
 import SearchLawyer from "@/images/searchLawyer.png";
 import Lawyer from "@/images/avocat.png";
+import Avocat from "@/images/ricardo.png";
 import Button from "@/components/ui/Button/Button";
 import Coins from "@/icons/coins.svg?react";
 import Check from "@/icons/check.svg?react";
 import Justice from "@/icons/justice.svg?react";
 import Marker from "@/icons/marker.svg?react";
+import { Rating } from "@/components/ui";
 
 const Home = () => {
   const { t } = useTranslation();
@@ -36,15 +38,40 @@ const Home = () => {
     },
   ];
 
-  const lawyer=[{
-    image:{Lawyer},
-    nom:"Alexandre Lefèvre",
-    rate:4,
-    address:"Bejaia, Centre Ville",
-    spécialité:"Droit pénal",
-    experience:"5 ans D’éxperience"
-
-  }]
+  const lawyers = [
+    {
+      image: Lawyer,
+      nom: "Alexandre Lefèvre",
+      rate: 4,
+      address: "Bejaia, Centre Ville",
+      spécialité: "Droit pénal",
+      experience: "5 ans D’éxperience",
+    },
+    {
+      image: Lawyer,
+      nom: "Alexandre Lefèvre",
+      rate: 3,
+      address: "Bejaia, Centre Ville",
+      spécialité: "Droit pénal",
+      experience: "5 ans D’éxperience",
+    },
+    {
+      image: Avocat,
+      nom: "Alexandre Lefèvre",
+      rate: 3,
+      address: "Bejaia, Centre Ville",
+      spécialité: "Droit pénal",
+      experience: "5 ans D’éxperience",
+    },
+    {
+      image: Lawyer,
+      nom: "Alexandre Lefèvre",
+      rate: 5,
+      address: "Bejaia, Centre Ville",
+      spécialité: "Droit pénal",
+      experience: "5 ans D’éxperience",
+    },
+  ];
 
   return (
     <>
@@ -185,12 +212,38 @@ const Home = () => {
         </div>
       </section>
 
-      <section id="recommandations">
-
-
-
-
-
+      <section id="recommandations" className="mt-16 pb-16  bg-primary">
+        <div className="c-container flex flex-col gap-8">
+          <h2 className="text-3xl text-white  font-bold mt-16">
+            
+            <span className="text-secondary"> {t("Our")} </span>
+            {t("recommandations")}{" "}
+          </h2>
+          <div className=" grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 mt-8 ">
+            {lawyers.map((lawyer, index) => (
+              <div className=" flex flex-col gap-1 bg-bgCard p-2 rounded-lg  " key={index}>
+                <img
+                  src={lawyer.image}
+                  alt={lawyer.nom}
+                  className=" h-[230px] object-cover w-[291px] rounded-lg "
+                />
+                <Rating rate={lawyer.rate} />
+                <div className="flex items-center gap-2">
+                  <Marker className="w-4" />
+                  <span className="text-white"> {lawyer.address} </span>
+                </div>
+                <div className="flex items-center gap-2">
+                  <Justice className="w-4" />
+                  <span className="text-white"> {lawyer.spécialité} </span>
+                </div>
+                <div className="flex items-center gap-2">
+                  <Check className="w-4" />
+                  <span className="text-white"> {lawyer.experience} </span>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
       </section>
     </>
   );

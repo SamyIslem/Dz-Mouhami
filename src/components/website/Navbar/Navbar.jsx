@@ -1,10 +1,27 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { Link, NavLink } from "react-router-dom";
 import { Button } from "@/ui";
 import Langues from "@/ui/Langues/Langues";
 import { useTranslation } from "react-i18next";
 
 const Navbar = () => {
+  const [scrolled, setScrolled] = useState(false);
+
+  const handleScroll = () => {
+    const offset = window.scrollY;
+    if (offset > 0) {
+      setScrolled(true);
+    } else {
+      setScrolled(false);
+    }
+  };
+
+  useEffect(() => {
+    window.addEventListener("scroll", handleScroll);
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
   const { t } = useTranslation();
   const links = [
     {
@@ -22,7 +39,11 @@ const Navbar = () => {
   ];
 
   return (
-    <header className="fixed top-0 right-0 left-0 z-10 ">
+    <header
+      className={` ${
+        scrolled ? "bg-slate-400" : ""
+      } fixed top-0 right-0 left-0 z-10`}
+    >
       <div className="c-container py-5 flex items-center justify-between">
         <Link to="/" className="">
           <h1 className="text-white font-bold">Dz-Mouhami</h1>
