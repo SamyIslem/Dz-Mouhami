@@ -6,7 +6,8 @@
   --max-width: 1140px;
 }
 
-body{
+
+body {
   background-color: #001F3F;
 }
 
@@ -14,10 +15,12 @@ body{
   max-width: min(90%, var(--max-width));
   margin-inline: auto;
 }
+
 .balance-25 {
   max-inline-size: 20ch;
   text-wrap: balance;
 }
+
 .balance-30 {
   max-inline-size: 60ch;
   /* text-wrap: balance; */

@@ -49,6 +49,8 @@ const resources = {
       recommandations: "recommandations",
       footerText:
         "Facilitez la prise de rendez-vous juridiques en un clic avec notre plateforme, offrant l'inscription de multiples avocats pour répondre à vos besoins spécifiques.",
+      ourLawyers: "Nos Avocats",
+      siteweb:"siteweb",
     },
     dir: "ltr",
   },
@@ -97,8 +99,11 @@ const resources = {
       Search: "بحث",
       Our: "توصياتنا ",
       recommandations: "لك",
-      footerText:"اجعل من السهل حجز المواعيد القانونية بنقرة واحدة من خلال منصتنا، مما يوفر إمكانية تسجيل العديد من المحامين لتلبية احتياجاتك الخاصة.",
-      Navigation:"شريط التنقل "
+      footerText:
+        "اجعل من السهل حجز المواعيد القانونية بنقرة واحدة من خلال منصتنا، مما يوفر إمكانية تسجيل العديد من المحامين لتلبية احتياجاتك الخاصة.",
+      Navigation: "شريط التنقل ",
+      ourLawyers: "محامينا",
+      siteweb:"موقع إلكتروني"
     },
     dir: "rtl",
   },

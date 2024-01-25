@@ -1,6 +1,6 @@
 import React from "react";
 import { Route, Routes } from "react-router-dom";
-import { Home, LogIn, SignUp } from "../pages";
+import { Avocats, DetailsAvocats, Home, LogIn, SignUp } from "@/pages";
 import { DefaultLayouts, EmptyLayout } from "@/layouts";
 
 const AppRoutes = () => {
@@ -9,6 +9,8 @@ const AppRoutes = () => {
       <Routes>
         <Route element={<DefaultLayouts />}>
           <Route element={<Home />} path="/"></Route>
+          <Route element={<Avocats />} path="/avocats"></Route>
+          <Route element={<DetailsAvocats />} path="/avocats/:id"></Route>
         </Route>
 
         <Route element={<EmptyLayout />}>
