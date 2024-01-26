@@ -11,6 +11,7 @@ export default {
         bgCard: "#1B426A",
         searchLabel: "#94BBE3",
         background: "#001F3F",
+        textCard:"#0051A6",
       },
     },
   },

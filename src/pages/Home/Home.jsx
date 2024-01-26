@@ -82,7 +82,7 @@ const Home = () => {
           backgroundSize: "cover",
         }}
         before
-        className="py-60 relative before:content-[''] before:bg-black before:opacity-50 before:absolute before:h-full before:w-full before:top-0 before:right-0 before:left-0 "
+        className="py-40 lg:py-60 relative bg-center before:content-[''] before:bg-black before:opacity-50 before:absolute before:h-full before:w-full before:top-0 before:right-0 before:left-0 "
       >
         <div className="c-container flex flex-col items-center justify-center gap-3 ">
           <h1 className="font-bold relative text-white text-3xl z-10 w-fit max-w-[20ch] text-center  after:content-['']  after:block after:bg-secondary after:h-1 after:w-12  after:absolute after:top-1/2 after:-translate-1/2 after:right-full after:mr-5   before:content-['']  before:block before:bg-secondary before:h-1 before:w-12  before:absolute before:top-1/2 before:-translate-1/2 before:left-full before:ml-5">
@@ -152,7 +152,7 @@ const Home = () => {
                       id="searchLawyerkeyWord"
                     />
                   </div>
-                  <div className="grid gap-2">
+                  <div className="grid col-span-2 lg:col-span-1 gap-2">
                     <label className="text-white " htmlFor="Budget">
                       {t("Budget")}
                     </label>
@@ -163,7 +163,7 @@ const Home = () => {
                       id="Budget"
                     />
                   </div>
-                  <div className="grid gap-2">
+                  <div className=" grid col-span-2 lg:col-span-1 gap-2">
                     <label className="text-white " htmlFor="Localisation">
                       {t("Localisation")}
                     </label>
@@ -174,7 +174,7 @@ const Home = () => {
                       id="Localisation"
                     />
                   </div>
-                  <div className="grid gap-2">
+                  <div className="grid col-span-2 lg:col-span-1 gap-2">
                     <label className="text-white " htmlFor="Speciality">
                       {t("Speciality")}
                     </label>
@@ -185,7 +185,7 @@ const Home = () => {
                       id="Speciality"
                     />
                   </div>
-                  <div className="grid gap-2">
+                  <div className="grid col-span-2 lg:col-span-1 gap-2">
                     <label className="text-white " htmlFor="Language">
                       {t("Language")}
                     </label>

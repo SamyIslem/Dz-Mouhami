@@ -94,42 +94,44 @@ const Avocats = () => {
               {t("ourLawyers")}
             </h2>
             {lawyers.map((lawyer, index) => (
-              <Link
-              to={`/avocats/${lawyer.id}`}
-                className=" flex items-center  gap-4 bg-bgCard p-2 rounded-lg relative cursor-pointer hover:animate-pulse  "
-                key={index}
-              >
-                <MarkerIcon
-                  className="absolute top-3 right-4 fill-[#F5F5F5] hover:fill-secondary  cursor-pointer "
+              <div className="relative" >
+                 <MarkerIcon
+                  className="absolute bottom-3 right-4 md:top-3 md:right-4 fill-[#F5F5F5] hover:fill-secondary  cursor-pointer z-20"
                   onClick={() => (
                     setLng(lawyer.coordinates.lng),
                     setLat(lawyer.coordinates.lat),
                     console.log(lng, lat)
                   )}
                 />
-                <img
-                  src={lawyer.image}
-                  alt={lawyer.nom}
-                  className=" h-[230px] object-cover w-[291px] rounded-lg "
-                />
-                <div className="flex flex-col">
-                  <span className="text-white">{lawyer.nom} </span>
-                  <Rating rate={lawyer.rate} />
-                  <div className="flex items-center gap-2">
-                    <Marker className="w-4" />
+                <Link
+                  to={`/avocats/${lawyer.id}`}
+                  className="flex flex-col md:flex-row md:items-center  gap-4 bg-bgCard p-2 rounded-lg relative cursor-pointer bg-opacity-70 hover:bg-opacity-100 "
+                  key={index}
+                >
+                  <img
+                    src={lawyer.image}
+                    alt={lawyer.nom}
+                    className=" h-[230px] object-cover w-[291px] rounded-lg "
+                  />
+                  <div className="flex flex-col">
+                    <span className="text-white">{lawyer.nom} </span>
+                    <Rating rate={lawyer.rate} />
+                    <div className="flex items-center gap-2">
+                      <Marker className="w-4" />
 
-                    <span className="text-white"> {lawyer.address} </span>
+                      <span className="text-white"> {lawyer.address} </span>
+                    </div>
+                    <div className="flex items-center gap-2">
+                      <Justice className="w-4" />
+                      <span className="text-white"> {lawyer.spécialité} </span>
+                    </div>
+                    <div className="flex items-center gap-2">
+                      <Check className="w-4" />
+                      <span className="text-white"> {lawyer.experience} </span>
+                    </div>
                   </div>
-                  <div className="flex items-center gap-2">
-                    <Justice className="w-4" />
-                    <span className="text-white"> {lawyer.spécialité} </span>
-                  </div>
-                  <div className="flex items-center gap-2">
-                    <Check className="w-4" />
-                    <span className="text-white"> {lawyer.experience} </span>
-                  </div>
-                </div>
-              </Link>
+                </Link>
+              </div>
             ))}
           </div>
 

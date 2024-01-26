@@ -15,7 +15,7 @@ const LogIn = () => {
 
   return (
     <div
-      className=" grid grid-cols-1 lg:grid-cols-2 relative items-center "
+      className=" grid grid-cols-1 lg:grid-cols-2 relative items-center bg-white "
       dir={t("dir")}
     >
       <div className="hidden lg:block lg:h-screen  lg:overflow-hidden ">

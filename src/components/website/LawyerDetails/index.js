@@ -1,0 +1,1 @@
+export { default as LawyerDetails } from "./LawyerDetails"

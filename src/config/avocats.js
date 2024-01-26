@@ -1,5 +1,8 @@
 import Lawyer from "@/images/avocat.png";
+import { useTranslation } from "react-i18next";
+
 export const avocats = [
+
   {
     id: 1,
     image: Lawyer,
@@ -12,8 +15,31 @@ export const avocats = [
       lat: 33.948145,
       lng: -118.324407,
     },
+    workExperience: {
+      work: [
+        {
+          business: "Attorney",
+          projects: ["Pivotal Law Group", "2027 - Present"],
+        },
+        {
+          business: "Attorney",
+          projects: ["Pivotal Law Group", "2027 - Present"],
+        },
+      ],
+      education: [
+        {
+          business: "Estin",
+          projects: ["Pivotal Law Group", "2027 - Present"],
+        },
+        {
+          business: "Inelec",
+          projects: ["Pivotal Law Group", "2027 - Present"],
+        },
+      ],
+    },
     description:
       "Bienvenue au cabinet d'avocats Dupont & Associés, où notre engagement est de fournir des services juridiques de qualité supérieure et de représenter nos clients avec intégrité, compétence et dévouement. Forts de notre expérience et de notre expertise dans divers domaines du droit, nous nous efforçons de résoudre efficacement les problèmes juridiques de nos clients tout en défendant leurs intérêts avec passion.",
+    tel: "+213 552 123 456",
   },
   {
     id: 2,
@@ -27,8 +53,31 @@ export const avocats = [
       lat: 83.948145,
       lng: -18.324407,
     },
+    workExperience: {
+      work: [
+        {
+          business: "Attorney",
+          projects: ["Pivotal Law Group", "2027 - Present"],
+        },
+        {
+          business: "Attorney",
+          projects: ["Pivotal Law Group", "2027 - Present"],
+        },
+      ],
+      education: [
+        {
+          business: "Estin",
+          projects: ["Pivotal Law Group", "2027 - Present"],
+        },
+        {
+          business: "Inelec",
+          projects: ["Pivotal Law Group", "2027 - Present"],
+        },
+      ],
+    },
     description:
       "Bienvenue au cabinet d'avocats Dupont & Associés, où notre engagement est de fournir des services juridiques de qualité supérieure et de représenter nos clients avec intégrité, compétence et dévouement. Forts de notre expérience et de notre expertise dans divers domaines du droit, nous nous efforçons de résoudre efficacement les problèmes juridiques de nos clients tout en défendant leurs intérêts avec passion.",
+    tel: "+213 552 123 456",
   },
   {
     id: 3,
@@ -42,8 +91,31 @@ export const avocats = [
       lat: 22.948145,
       lng: -8.324407,
     },
+    workExperience: {
+      work: [
+        {
+          business: "Attorney",
+          projects: ["Pivotal Law Group", "2027 - Present"],
+        },
+        {
+          business: "Attorney",
+          projects: ["Pivotal Law Group", "2027 - Present"],
+        },
+      ],
+      education: [
+        {
+          business: "Estin",
+          projects: ["Pivotal Law Group", "2027 - Present"],
+        },
+        {
+          business: "Inelec",
+          projects: ["Pivotal Law Group", "2027 - Present"],
+        },
+      ],
+    },
     description:
       "Bienvenue au cabinet d'avocats Dupont & Associés, où notre engagement est de fournir des services juridiques de qualité supérieure et de représenter nos clients avec intégrité, compétence et dévouement. Forts de notre expérience et de notre expertise dans divers domaines du droit, nous nous efforçons de résoudre efficacement les problèmes juridiques de nos clients tout en défendant leurs intérêts avec passion.",
+    tel: "+213 552 123 456",
   },
   {
     id: 4,
@@ -57,8 +129,31 @@ export const avocats = [
       lat: 33.948145,
       lng: -118.324407,
     },
+    workExperience: {
+      work: [
+        {
+          business: "Attorney",
+          projects: ["Pivotal Law Group", "2027 - Present"],
+        },
+        {
+          business: "Attorney",
+          projects: ["Pivotal Law Group", "2027 - Present"],
+        },
+      ],
+      education: [
+        {
+          business: "Estin",
+          projects: ["Pivotal Law Group", "2027 - Present"],
+        },
+        {
+          business: "Inelec",
+          projects: ["Pivotal Law Group", "2027 - Present"],
+        },
+      ],
+    },
     description:
       "Bienvenue au cabinet d'avocats Dupont & Associés, où notre engagement est de fournir des services juridiques de qualité supérieure et de représenter nos clients avec intégrité, compétence et dévouement. Forts de notre expérience et de notre expertise dans divers domaines du droit, nous nous efforçons de résoudre efficacement les problèmes juridiques de nos clients tout en défendant leurs intérêts avec passion.",
+    tel: "+213 552 123 456",
   },
   {
     id: 5,
@@ -72,7 +167,30 @@ export const avocats = [
       lat: 33.948145,
       lng: -118.324407,
     },
+    workExperience: {
+      work: [
+        {
+          business: "Attorney",
+          projects: ["Pivotal Law Group", "2027 - Present"],
+        },
+        {
+          business: "Attorney",
+          projects: ["Pivotal Law Group", "2027 - Present"],
+        },
+      ],
+      education: [
+        {
+          business: "Estin",
+          projects: ["Pivotal Law Group", "2027 - Present"],
+        },
+        {
+          business: "Inelec",
+          projects: ["Pivotal Law Group", "2027 - Present"],
+        },
+      ],
+    },
     description:
       "Bienvenue au cabinet d'avocats Dupont & Associés, où notre engagement est de fournir des services juridiques de qualité supérieure et de représenter nos clients avec intégrité, compétence et dévouement. Forts de notre expérience et de notre expertise dans divers domaines du droit, nous nous efforçons de résoudre efficacement les problèmes juridiques de nos clients tout en défendant leurs intérêts avec passion.",
+    tel: "+213 552 123 456",
   },
 ];

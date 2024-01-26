@@ -3,6 +3,7 @@ import { Link, NavLink } from "react-router-dom";
 import { Button } from "@/ui";
 import Langues from "@/ui/Langues/Langues";
 import { useTranslation } from "react-i18next";
+import IconMenu from "@/icons/iconMenu.svg?react";
 
 const Navbar = () => {
   const [scrolled, setScrolled] = useState(false);
@@ -42,16 +43,18 @@ const Navbar = () => {
     <header
       className={` ${
         scrolled ? "bg-slate-400" : ""
-      } fixed top-0 right-0 left-0 z-10`}
+      } fixed top-0 right-0 left-0 z-50 `}
     >
       <div className="c-container py-5 flex items-center justify-between">
         <Link to="/" className="">
           <h1 className="text-white font-bold">Dz-Mouhami</h1>
         </Link>
 
-        <div className="flex gap-4">
-          <nav className="flex gap-10">
-            <ul className="flex items-center justify-center gap-8">
+        <div className=" flex gap-4">
+        
+          <nav className="hidden lg:flex flex-row gap-10">
+            
+            <ul className="flex  flex-row items-center justify-center gap-8">
               {links.map((link, index) => (
                 <li key={index}>
                   <NavLink
@@ -79,9 +82,11 @@ const Navbar = () => {
             </div>
           </nav>
 
-          <div>
+          <div className="" >
             <Langues />
           </div>
+            
+            <button><IconMenu className="stroke-white lg:invisible hover:stroke-secondary " /></button>
         </div>
       </div>
     </header>
