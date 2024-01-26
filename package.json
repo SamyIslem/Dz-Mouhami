@@ -10,14 +10,24 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@emotion/react": "^11.11.3",
+    "@emotion/styled": "^11.11.0",
     "@headlessui/react": "^1.7.17",
     "@heroicons/react": "^2.1.1",
+    "@mui/icons-material": "^5.15.6",
+    "@mui/material": "^5.15.6",
+    "@mui/x-data-grid": "^6.19.2",
     "i18next": "^23.7.16",
+    "install": "^0.13.0",
     "mapbox-gl": "^3.1.0",
+    "npm": "^10.4.0",
     "react": "^18.2.0",
+    "react-big-calendar": "^1.8.7",
     "react-dom": "^18.2.0",
     "react-i18next": "^14.0.0",
     "react-router-dom": "^6.21.1",
+    "react-star-ratings": "^2.3.0",
+    "recharts": "^2.10.4",
     "vite-plugin-svgr": "^4.2.0"
   },
   "devDependencies": {
