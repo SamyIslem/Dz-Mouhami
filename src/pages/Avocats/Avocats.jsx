@@ -67,12 +67,12 @@ const Avocats = () => {
           backgroundSize: "cover",
         }}
         before
-        className="py-60 relative before:content-[''] before:bg-black before:opacity-50 before:absolute before:h-full before:w-full before:top-0 before:right-0 before:left-0 "
+        className="py-40 lg:py-60 relative bg-center before:content-[''] before:bg-black before:opacity-50 before:absolute before:h-full before:w-full before:top-0 before:right-0 before:left-0 "
       >
         <div className="c-container flex flex-col items-center justify-center gap-3 ">
           <h1 className="font-bold relative text-white text-3xl z-10 w-fit max-w-[20ch] text-center  after:content-['']  after:block after:bg-secondary after:h-1 after:w-12  after:absolute after:top-1/2 after:-translate-1/2 after:right-full after:mr-5   before:content-['']  before:block before:bg-secondary before:h-1 before:w-12  before:absolute before:top-1/2 before:-translate-1/2 before:left-full before:ml-5">
             {" "}
-            {t("ourLawyers")}{" "}
+            {t("title")}{" "}
           </h1>
 
           <p className="text-white z-10  xs:leading-[10px]  w-3/4 text-wrap balance-30 text-center ">
@@ -86,6 +86,7 @@ const Avocats = () => {
           </div>
         </div>
       </main>
+
 
       <section id="avocats" className="py-16">
         <div className="c-container grid grid-cols-1 lg:grid-cols-2 gap-8">

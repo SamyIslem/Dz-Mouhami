@@ -64,7 +64,10 @@ const resources = {
       tarifs:"Tarifs",
       disponibilité:"Disponibilité",
       avis:"Avis",
-      articles:"Articles"
+      articles:"Articles",
+      appointment:"Rendez-vous au cabinet",
+      duration:"durée"
+      
 
     },
     dir: "ltr",
@@ -132,7 +135,8 @@ const resources = {
       tarifs:"أسعار",
       disponibilité:"التوفر",
       avis:"الآراء",
-      articles:"المقالات"
+      articles:"المقالات",
+      duration:"مدة"
     },
     dir: "rtl",
   },
