@@ -22,7 +22,7 @@ function DropDown() {
         <img className=" rotate-90" src={chevronright} alt="" />
         {isShown && (
         <div className="absolute w-48 flex flex-col top-full mt-2" onClick={toggleIsShown}>
-          <Link to="/profile" className=" bg-slate-300 border p-2 text-center">
+          <Link to="/lawyer/profile" className=" bg-slate-300 border p-2 text-center">
             Profile
           </Link>
           <Link className=" bg-slate-300 border p-2 text-center">

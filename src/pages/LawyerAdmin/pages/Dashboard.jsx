@@ -20,13 +20,12 @@ const LawyerDashboard = () => {
     <div className="container flex flex-col  justify-between  p-4">
       
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
-        {/* Total Clients */}
         <div className="bg-white p-3 rounded shadow-md">
           <h2 className="text-lg font-semibold mb-2">Total Clients</h2>
           <p className="text-3xl font-bold text-blue-500">{totalClients}</p>
         </div>
 
-        {/* Cases in Progress */}
+       
         <div className="bg-white p-3 rounded shadow-md">
           <h2 className="text-lg font-semibold mb-2">Cases in Progress</h2>
           <p className="text-3xl font-bold text-yellow-500">{casesInProgress}</p>
@@ -54,6 +53,7 @@ const LawyerDashboard = () => {
       </div>
       
       <div className='mt-4'>
+        <h1 className='text-xl font-bold mb-4'>Earnings</h1>
         <EarningChart/>
       </div>
     </div>
