@@ -50,7 +50,7 @@ const LogIn = () => {
               />
             </div>
 
-            <div id="nomUtilisateur" className="flex flex-col gap-2 relative ">
+            <div id="password" className="flex flex-col gap-2 relative ">
               <label htmlFor="Mot De Passe" className="font-medium ">
                 {t("password")}
               </label>
@@ -74,22 +74,25 @@ const LogIn = () => {
                 {hidden ? <Eye /> : <ClosedEye />}
               </div>
             </div>
+
           </div>
         </div>
 
         <div className="w-[280px] flex flex-col gap-4 mt-4">
-          <Button className="bg-secondaryButton w-full">
+          <Button className="bg-secondaryButton w-full text-white font-bold">
             {" "}
             {t("finaliseLogIn")}{" "}
           </Button>
-          <div className="flex gap-3 items-center w-full justify-center border-2 rounded-xl p-2 cursor-pointer  ">
+          <div className="flex gap-3 items-center w-full justify-center border-2 rounded-xl p-2 cursor-pointer font-bold ">
             <Google />
             <span> {t("Google")} </span>
           </div>
         </div>
         <p className="mt-2 text-primary ">
-          Vous n’avez pas encore de comptes? 
-          <Link to="/signup" className="text-secondaryButton" >Insrivez vous</Link>
+          Vous n’avez pas encore de comptes?
+          <Link to="/signup" className="text-secondaryButton">
+            Insrivez vous
+          </Link>
         </p>
       </div>
       <div className="absolute top-4 right-0">
