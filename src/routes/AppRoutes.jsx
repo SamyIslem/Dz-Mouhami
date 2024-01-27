@@ -18,25 +18,22 @@ import Parameters from "@/pages/LawyerAdmin/Pages/Parameters";
 import AdminSidebar from "@/pages/Administrator/Components/Sidebar";
 import AdminTopBar from "@/pages/Administrator/Components/TopBar";
 import AdminDashboard from "@/pages/Administrator/Pages/Dashboard";
-import AdminRatings from "@/pages/Administrator/Pages/Ratings";
-import AdminAppointments from "@/pages/Administrator/Pages/Appointments";
-import AdminPayments from "@/pages/Administrator/Pages/Payments";
+import AdminAvocats from "@/pages/Administrator/Pages/Avocats";
 import AdminHelp from "@/pages/Administrator/Pages/Help";
 import AdminProfile from "@/pages/Administrator/Pages/Profile";
-import AdminArticles from "@/pages/Administrator/Pages/Articles";
-import AdminCalender from "@/pages/Administrator/Pages/Calender";
 import AdminParameters from "@/pages/Administrator/Pages/Parameters";
+import AdminClients from "@/pages/Administrator/Pages/Clients";
 
 const LawyerRoutes = () => {
   return (
     <>
-      <div className="flex bg-white">
+      <div className="flex bg-white h-screen">
         <Sidebar />
         <div className="flex flex-col w-full">
           <TopBar />
           <div className="p-4 bg-[#f9f9ff]">
             <Routes>
-              {/* Remove index attribute and set the path to "dashboard" */}
+              
               <Route path="dashboard" element={<Dashboard />} />
               <Route path="clients" element={<Appointments />} />
               <Route path="payments" element={<Payments />} />
@@ -57,21 +54,17 @@ const LawyerRoutes = () => {
 const AdminRoutes = () => {
   return (
     <>
-      <div className="flex bg-white">
+      <div className="flex bg-white h-screen">
         <AdminSidebar />
         <div className="flex flex-col w-full">
           <AdminTopBar />
           <div className="p-4 bg-[#f9f9ff]">
             <Routes>
-              {/* Remove index attribute and set the path to "dashboard" */}
               <Route path="dashboard" element={<AdminDashboard />} />
-              <Route path="clients" element={<AdminAppointments />} />
-              <Route path="payments" element={<AdminPayments />} />
-              <Route path="ratings" element={<AdminRatings />} />
+              <Route path="avocats" element={<AdminAvocats />} />
+              <Route path="clients" element={<AdminClients />} />
               <Route path="help" element={<AdminHelp />} />
               <Route path="profile" element={<AdminProfile />} />
-              <Route path="articles" element={<AdminArticles />} />
-              <Route path="calender" element={<AdminCalender />} />
               <Route path="parameters" element={<AdminParameters />} />
             </Routes>
           </div>

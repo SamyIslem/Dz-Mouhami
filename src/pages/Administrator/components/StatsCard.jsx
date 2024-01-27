@@ -8,8 +8,8 @@ function StatsCard() {
       <div className={` flex gap-2     judtify-center`}>
         <img src={Costumers} alt="" />
         <div className="flex flex-col justify-between">
-          <h3 className="text-grey text-md">Total costumers</h3>
-          <h1 className="text-xl font-bold">147896</h1>
+          <h3 className="text-grey text-md">Total Lawyers</h3>
+          <h1 className="text-xl font-bold">14796</h1>
           <div className="flex">
             <img src="" alt="" />
             <span>14%</span> &nbsp;this month<span></span>
@@ -20,7 +20,7 @@ function StatsCard() {
       <div className={` flex gap-2  `}>
         <img src={Costumer} alt="" />
         <div className="flex flex-col justify-between">
-          <h3 className="text-grey text-md">Ratings</h3>
+          <h3 className="text-grey text-md">Total Costumers</h3>
           <h1 className="text-xl font-bold">147896</h1>
           <div className="flex">
             <img src="" alt="" />

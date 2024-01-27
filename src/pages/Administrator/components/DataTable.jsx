@@ -1,59 +1,10 @@
 import * as React from 'react';
 import { DataGrid } from '@mui/x-data-grid';
 import { useState } from 'react';
-const columns = [
-  { field: 'id', headerName: 'ID', width: 70 },
-  { field: 'clientName', headerName: 'Client Name', width: 130 },
-  { field: 'clientIssue', headerName: 'Probleme', width: 130 },
-  {
-    field: 'phoneNumber',
-    headerName: 'Phone Number',
-    width: 130,
-    type:'number'
-  },
-  {
-    field: 'email',
-    headerName: 'Email',
-    width: 160,
-  },
-  {
-    field: 'wilaya',
-    headerName: 'Wilaya',
-    width: 90,
-  },
-  {
-    field: 'issueStatus',
-    headerName: 'Status',
-    width: 120,
-    renderCell: (params) => (
-      <span
-        className={`inline-block px-2 py-1 text-sm font-semibold rounded ${
-          params.value === 'completed' ? 'bg-green-500 text-white' :
-          params.value === 'refused' ? 'bg-red-500 text-white' :
-          params.value === 'in progress' ? 'bg-yellow-500 text-white' :
-          ''
-        }`}
-      >
-        {params.value}
-      </span>
-    ),
-  },
-];
-
-const rows = [
-  { id: 1, clientName: 'Snow', clientIssue: 'Divorce', phoneNumber:  5550118 , email :'jane@microsoft.com' ,wilaya: 'Bejaia', issueStatus:'completed'},
-  { id: 2, clientName: 'Lannister', clientIssue: 'Divorce', phoneNumber:  5550118 , email :'jane@microsoft.com' ,wilaya: 'Bejaia', issueStatus:'refused'},
-  { id: 3, clientName: 'Lannister', clientIssue: 'Tue', phoneNumber:  5550118 , email :'jane@microsoft.com' ,wilaya: 'Bejaia', issueStatus:'in progress'},
-  { id: 4, clientName: 'Stark', clientIssue: '3limghara', phoneNumber:  5550118 , email :'jane@microsoft.com' ,wilaya: 'Bejaia', issueStatus:'completed'},
-  { id: 5, clientName: 'Targaryen', clientIssue: 'stegh', phoneNumber:  5550118 , email :'jane@microsoft.com' ,wilaya: 'Bejaia', issueStatus:'completed'},
-  { id: 6, clientName: 'Melisandre', clientIssue: null, phoneNumber:  5550118 , email :'jane@microsoft.com' ,wilaya: 'Bejaia', issueStatus: 'completed'},
-  { id: 7, clientName: 'Clifford', clientIssue: 'Ferrara', phoneNumber:  5550118 , email :'jane@microsoft.com' ,wilaya: 'Bejaia', issueStatus:'completed'},
-  { id: 8, clientName: 'Frances', clientIssue: 'Rossini', phoneNumber:  5550118 , email :'jane@microsoft.com' ,wilaya: 'Bejaia', issueStatus:'completed'},
-  { id: 9, clientName: 'Roxie', clientIssue: 'Harvey', phoneNumber:  5550118 , email :'jane@microsoft.com' ,wilaya: 'Bejaia', issueStatus:'completed'},
-];
 
 
-export default function DataTable() {
+
+export default function DataTable({columns, rows ,type}) {
   const [selectedRow, setSelectedRow] = useState(null);
 
 const handleRowClick = (params) => {
@@ -100,25 +51,27 @@ const handleSubmit = (event) => {
               <h1 className="text-xl font-bold mb-4">Edit Client</h1>
               <div className="mb-4">
                 <label className="block mb-2">Client Name</label>
-                <input type="text" name="clientName" value={selectedRow.clientName} onChange={handleInputChange} className="border border-gray-300 rounded px-2 py-1 w-full" />
+                <input type="text" name="LawyerName" value={selectedRow.LawyerName} onChange={handleInputChange} className="border border-gray-300 rounded px-2 py-1 w-full" />
               </div>
               <div className="mb-4">
                 <label className="block mb-2">Client Issue</label>
-                <input type="text" name="clientIssue" value={selectedRow.clientIssue} onChange={handleInputChange} className="border border-gray-300 rounded px-2 py-1 w-full" />
+                <input type="text" name="LawyerSpeciality" value={selectedRow.LawyerSpeciality} onChange={handleInputChange} className="border border-gray-300 rounded px-2 py-1 w-full" />
               </div>
+              {type==='avocats' && 
               <div className="flex items-center mb-4">
                 <label className="mr-2">Status:</label>
                 <select
-                  name="issueStatus"
-                  value={selectedRow.issueStatus}
+                  name="AccountStatus"
+                  value={selectedRow.AccountStatus}
                   onChange={handleInputChange}
                   className="border border-gray-300 rounded px-2 py-1"
                 >
                   <option value="accepted">Accepted</option>
                   <option value="refused">Refused</option>
                   <option value="pending">Pending</option>
+                  <option value="suspended">suspended</option>
                 </select>
-              </div>
+              </div>}
               <div className="mb-4">
                 <label className="block mb-2">Phone Number</label>
                 <input type="text" name="phoneNumber" value={selectedRow.phoneNumber} onChange={handleInputChange} className="border border-gray-300 rounded px-2 py-1 w-full" />
