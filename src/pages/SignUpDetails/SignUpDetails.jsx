@@ -1,5 +1,6 @@
 import React from "react";
 import { useTranslation } from "react-i18next";
+import { Link } from "react-router-dom";
 
 const SignUpDetails = () => {
   const { t } = useTranslation();
@@ -234,9 +235,9 @@ const SignUpDetails = () => {
             </div>
 
             <div className="flex justify-end">
-              <button className="bg-yellow-400 text-[#001F3F] rounded-md px-4 py-2.5 font-bold">
+              <Link to='/lawyer/dashboard' className="bg-yellow-400 text-[#001F3F] rounded-md px-4 py-2.5 font-bold">
                 Enregistrer
-              </button>
+              </Link>
             </div>
           </form>
         </div>
