@@ -14,9 +14,11 @@
     "@emotion/styled": "^11.11.0",
     "@headlessui/react": "^1.7.17",
     "@heroicons/react": "^2.1.1",
+    "@hookform/resolvers": "^3.3.4",
     "@mui/icons-material": "^5.15.6",
     "@mui/material": "^5.15.6",
     "@mui/x-data-grid": "^6.19.2",
+    "axios": "^1.6.7",
     "i18next": "^23.7.16",
     "install": "^0.13.0",
     "mapbox-gl": "^3.1.0",
@@ -27,8 +29,10 @@
     "react-i18next": "^14.0.0",
     "react-router-dom": "^6.21.1",
     "react-star-ratings": "^2.3.0",
+    "react-toastify": "^10.0.4",
     "recharts": "^2.10.4",
-    "vite-plugin-svgr": "^4.2.0"
+    "vite-plugin-svgr": "^4.2.0",
+    "zod": "^3.22.4"
   },
   "devDependencies": {
     "@types/react": "^18.2.43",
