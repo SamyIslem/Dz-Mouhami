@@ -50,7 +50,7 @@ const onSubmit = async (data) => {
     setLoading(false);
     toast.dismiss(toastId);
     toast.success(response);
-    selectedOption === 'lawyer' ? navigate('/lawyer/dashboard') : navigate('/')
+    selectedOption === 'lawyer' ? navigate('/signupdetails') : navigate('/')
     localStorage.setItem('lawyer_id', response.data.lawyer_id);
 
   } catch (error) {

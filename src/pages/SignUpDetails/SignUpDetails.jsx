@@ -51,7 +51,7 @@ const SignUpDetails = () => {
       <section>
         <div className="c-container py-16">
           <h1 className="text-3xl font-bold text-white">
-            Ajout d'un <span className="text-yellow-400">avocat</span>
+            Ajouter plus de  <span className="text-yellow-400">details</span>
           </h1>
 
           <form className="mt-14" onSubmit={submitHandler}>

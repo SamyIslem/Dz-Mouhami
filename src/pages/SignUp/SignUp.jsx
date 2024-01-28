@@ -46,7 +46,7 @@ const SignUp = () => {
       setLoading(false);
       toast.dismiss(toastId);
       toast.success(response);
-      selectedOption === 'lawyer' ? navigate('/lawyer/dashboard') : navigate('/')
+      selectedOption === 'lawyer' ? navigate('/signupdetails') : navigate('/')
     } catch (error) {
       setLoading(false);
       toast.dismiss(toastId);
