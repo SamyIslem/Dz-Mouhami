@@ -23,6 +23,7 @@ import AdminHelp from "@/pages/Administrator/Pages/Help";
 import AdminProfile from "@/pages/Administrator/Pages/Profile";
 import AdminParameters from "@/pages/Administrator/Pages/Parameters";
 import AdminClients from "@/pages/Administrator/Pages/Clients";
+import SignUpDetails from "../pages/SignUpDetails/SignUpDetails";
 
 const LawyerRoutes = () => {
   return (
@@ -85,6 +86,7 @@ const AppRoutes = () => {
       <Route element={<EmptyLayout />}>
         <Route element={<LogIn />} path="/login" />
         <Route element={<SignUp />} path="/signup" />
+        <Route element={<SignUpDetails />} path="/signupDetails" />
       </Route>
 
       <Route element={<LawyerRoutes />} path="/lawyer/*" />

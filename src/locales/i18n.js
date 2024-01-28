@@ -66,8 +66,7 @@ const resources = {
       avis:"Avis",
       articles:"Articles",
       appointment:"Rendez-vous au cabinet",
-      duration:"durée",
-      username : 'nom d utilisateur',
+      duration:"durée"
       
 
     },
@@ -137,8 +136,7 @@ const resources = {
       disponibilité:"التوفر",
       avis:"الآراء",
       articles:"المقالات",
-      duration:"مدة"  ,
-      username : 'اسم المستخدم',
+      duration:"مدة"
     },
     dir: "rtl",
   },

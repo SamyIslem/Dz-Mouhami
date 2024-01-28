@@ -121,7 +121,7 @@ const onSubmit = async (data) => {
             </div>
             {errors.username && <p className=" text-red-600">{errors.username.message}</p>}
 
-            <div id="nomUtilisateur" className="flex flex-col gap-2 relative ">
+            <div id="password" className="flex flex-col gap-2 relative ">
               <label htmlFor="Mot De Passe" className="font-medium ">
                 {t("password")}
               </label>
@@ -146,6 +146,7 @@ const onSubmit = async (data) => {
                 {hidden ? <Eye /> : <ClosedEye />}
               </div>
             </div>
+
           </div>
         </div>
 
@@ -161,8 +162,10 @@ const onSubmit = async (data) => {
           </div>
         </div>
         <p className="mt-2 text-primary ">
-          Vous n’avez pas encore de comptes? 
-          <Link to="/signup" className="text-secondaryButton" >Insrivez vous</Link>
+          Vous n’avez pas encore de comptes?
+          <Link to="/signup" className="text-secondaryButton">
+            Insrivez vous
+          </Link>
         </p>
       </div>
       <div className="absolute top-4 right-0">
