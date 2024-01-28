@@ -58,7 +58,6 @@ const resources = {
       nomComplet: "Nom Complet",
       email: "Email",
       telephone: "Numero de telephone",
-<<<<<<< HEAD
       date: "Date et heure de disponibilite",
       typeConsultation: "Type de consultation",
       problem: "problème",
@@ -80,19 +79,6 @@ const resources = {
       Objet: "Objet",
       remplir: "Veuillez remplir ce",
       form: "formulaire",
-=======
-      date:"Date et heure de disponibilite",
-      typeConsultation:"Type de consultation",
-      problem:"problème",
-      tarifs:"Tarifs",
-      disponibilité:"Disponibilité",
-      avis:"Avis",
-      articles:"Articles",
-      appointment:"Rendez-vous au cabinet",
-      duration:"durée"
-      
-
->>>>>>> be66143fed2f99a3b442cf99bc3e682425b4d021
     },
     dir: "ltr",
   },
@@ -153,7 +139,6 @@ const resources = {
       nomComplet: "الاسم الكامل",
       email: "بريد إلكتروني",
       telephone: "رقم الهاتف",
-<<<<<<< HEAD
       date: "تاريخ ووقت التوفر",
       typeConsultation: "نوع الاستشارة",
       problem: "مشكلة",
@@ -174,16 +159,6 @@ const resources = {
       Objet: "موضوع",
       remplir: "الرجاء ملء هذا",
       form: "النموذج",
-=======
-      date:"تاريخ ووقت التوفر",
-      typeConsultation:"نوع الاستشارة",
-      problem:"مشكلة",
-      tarifs:"أسعار",
-      disponibilité:"التوفر",
-      avis:"الآراء",
-      articles:"المقالات",
-      duration:"مدة"
->>>>>>> be66143fed2f99a3b442cf99bc3e682425b4d021
     },
     dir: "rtl",
   },
