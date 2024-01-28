@@ -34,6 +34,12 @@ const SignUpDetails = () => {
       cordoneey,
       decription,
     };
+    let lawyers = [];
+    if (localStorage.getItem("lawyers")) {
+      lawyers = JSON.parse(localStorage.getItem("lawyers"));
+    }
+    lawyers.push(lawyer);
+    localStorage.setItem("lawyers", JSON.stringify(lawyers));
 
     const response = await fetch(`localhost:8000/lawyer_account/create`, {
       method: "POST",
@@ -41,7 +47,6 @@ const SignUpDetails = () => {
         "Content-Type": "application/x-www-form-urlencoded",
       },
       body: lawyer,
-      
     });
     console.log(response);
   };

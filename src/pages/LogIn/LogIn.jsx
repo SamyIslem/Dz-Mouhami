@@ -151,7 +151,7 @@ const onSubmit = async (data) => {
         </div>
 
         <div className="w-[280px] flex flex-col gap-4 mt-4">
-        <input  className="bg-secondaryButton w-full text-white font-bold py-2 cursor-pointer "
+        <input  className="bg-secondaryButton w-full text-white font-bold py-2 cursor-pointer rounded-lg "
             type="submit"
             disabled={loading}
             value={t("finaliseLogIn")}
