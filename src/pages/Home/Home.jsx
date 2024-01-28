@@ -96,8 +96,8 @@ const Home = () => {
           </p>
 
           <div className="flex items-center justify-center z-10 font-semibold gap-5 mt-5 ">
-            <Button variant="secondary"> {t("contactButton")} </Button>
-            <Button variant="primary">{t("lawyerButton")}</Button>
+            <Button variant="secondary" to="/contact"  > {t("contactButton")} </Button>
+            <Button variant="primary" to="/avocats" >{t("lawyerButton")}</Button>
           </div>
         </div>
       </main>

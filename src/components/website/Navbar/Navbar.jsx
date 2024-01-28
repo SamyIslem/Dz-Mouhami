@@ -7,6 +7,7 @@ import IconMenu from "@/icons/iconMenu.svg?react";
 
 const Navbar = () => {
   const [scrolled, setScrolled] = useState(false);
+  const [menuClicked, setMenuClicked] = useState(false);
 
   const handleScroll = () => {
     const offset = window.scrollY;
@@ -39,6 +40,29 @@ const Navbar = () => {
     },
   ];
 
+  const mobileLinks = [
+    {
+      name: t("home"),
+      path: "/",
+    },
+    {
+      name: t("lawyers"),
+      path: "/avocats",
+    },
+    {
+      name: t("contact"),
+      path: "/contact",
+    },
+    {
+      name: t("logIn"),
+      path: "/login",
+    },
+    {
+      name: t("signUp"),
+      path: "/signup",
+    },
+  ];
+
   return (
     <header
       className={` ${
@@ -46,14 +70,15 @@ const Navbar = () => {
       } fixed top-0 right-0 left-0 z-50 `}
     >
       <div className="c-container py-5 flex items-center justify-between">
-        <Link to="/" className="">
+        <Link to="/" className="flex items-center gap-3">
+          <span className="font-bold text-black bg-secondary px-3 py-2 rounded-lg">
+            M
+          </span>
           <h1 className="text-white font-bold">Dz-Mouhami</h1>
         </Link>
 
         <div className=" flex gap-4">
-        
           <nav className="hidden lg:flex flex-row gap-10">
-            
             <ul className="flex  flex-row items-center justify-center gap-8">
               {links.map((link, index) => (
                 <li key={index}>
@@ -82,11 +107,35 @@ const Navbar = () => {
             </div>
           </nav>
 
-          <div className="" >
+          <div className="">
             <Langues />
           </div>
-            
-            <button><IconMenu className="stroke-white lg:invisible hover:stroke-secondary " /></button>
+
+          {/* passage en mobile  */}
+
+          <button onClick={()=>setMenuClicked(!menuClicked)} >
+            <IconMenu className="stroke-white lg:invisible hover:stroke-secondary "  />
+          </button>
+          {menuClicked && (
+            <ul className="flex  flex-col items-center justify-center gap-8 absolute top-20 right-0 bg-bgCard p-2">
+              {mobileLinks.map((link, index) => (
+                <li key={index} className="hover:bg-red">
+                  <NavLink
+                    to={link.path}
+                    className={({ isActive, isPending }) =>
+                      isPending
+                        ? ""
+                        : isActive
+                        ? "text-secondary"
+                        : "hover:text-zinc-300  text-white"
+                    }
+                  >
+                    {link.name}
+                  </NavLink>
+                </li>
+              ))}
+            </ul>
+          )}
         </div>
       </div>
     </header>

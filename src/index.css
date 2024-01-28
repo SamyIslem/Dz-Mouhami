@@ -9,6 +9,7 @@
 
 body {
   background-color: #001F3F;
+  box-sizing: border-box;
 }
 
 .c-container {

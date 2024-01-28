@@ -1,5 +1,6 @@
 import { useTranslation } from "react-i18next";
 import MainImage from "@/images/mainImage.png";
+import Avocat from "@/images/mainAvocat.jpg";
 import Button from "@/components/ui/Button/Button";
 import { useEffect, useRef, useState } from "react";
 import { avocats } from "@/config/avocats.js";
@@ -62,7 +63,7 @@ const Avocats = () => {
     <>
       <main
         style={{
-          background: `url(${MainImage})`,
+          background: `url(${Avocat})`,
           backgroundRepeat: "no-repeat",
           backgroundSize: "cover",
         }}
@@ -81,12 +82,14 @@ const Avocats = () => {
           </p>
 
           <div className="flex items-center justify-center z-10 font-semibold gap-5 mt-5 ">
-            <Button variant="secondary"> {t("contactButton")} </Button>
+            <Button variant="secondary" to="/contact">
+              {" "}
+              {t("contactButton")}{" "}
+            </Button>
             <Button variant="primary">{t("lawyerButton")}</Button>
           </div>
         </div>
       </main>
-
 
       <section id="avocats" className="py-16">
         <div className="c-container grid grid-cols-1 lg:grid-cols-2 gap-8">
@@ -95,8 +98,8 @@ const Avocats = () => {
               {t("ourLawyers")}
             </h2>
             {lawyers.map((lawyer, index) => (
-              <div className="relative" >
-                 <MarkerIcon
+              <div className="relative">
+                <MarkerIcon
                   className="absolute bottom-3 right-4 md:top-3 md:right-4 fill-[#F5F5F5] hover:fill-secondary  cursor-pointer z-20"
                   onClick={() => (
                     setLng(lawyer.coordinates.lng),

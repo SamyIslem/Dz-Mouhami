@@ -1,6 +1,6 @@
 import React from "react";
 import { Route, Routes } from "react-router-dom";
-import { Avocats, DetailsAvocats, Home, LogIn, SignUp } from "@/pages";
+import { Avocats, DetailsAvocats, Home, LogIn, SignUp, Contact } from "@/pages";
 import { DefaultLayouts, EmptyLayout } from "@/layouts";
 import Sidebar from "@/pages/LawyerAdmin/Components/Sidebar";
 import TopBar from "@/pages/LawyerAdmin/Components/TopBar";
@@ -81,6 +81,7 @@ const AppRoutes = () => {
         <Route element={<Home />} path="/" />
         <Route element={<Avocats />} path="/avocats" />
         <Route element={<DetailsAvocats />} path="/avocats/:id" />
+        <Route element={<Contact />} path="/contact" />
       </Route>
 
       <Route element={<EmptyLayout />}>
