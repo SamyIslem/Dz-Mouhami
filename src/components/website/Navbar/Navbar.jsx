@@ -5,10 +5,11 @@ import Langues from "@/ui/Langues/Langues";
 import { useTranslation } from "react-i18next";
 import IconMenu from "@/icons/iconMenu.svg?react";
 
+
 const Navbar = () => {
   const [scrolled, setScrolled] = useState(false);
   const [menuClicked, setMenuClicked] = useState(false);
-
+  const id= localStorage.getItem('lawyer_id');
   const handleScroll = () => {
     const offset = window.scrollY;
     if (offset > 0) {
@@ -97,14 +98,19 @@ const Navbar = () => {
                 </li>
               ))}
             </ul>
+
+            {!id &&
+            
             <div className="flex items-center gap-3 font-medium">
-              <Button variant="secondary" className="text-primary " to="/login">
-                {t("logIn")}
-              </Button>
-              <Button variant="primary" className="text-primary" to="signup">
-                {t("signUp")}
-              </Button>
-            </div>
+            <Button variant="secondary" className="text-primary " to="/login">
+              {t("logIn")}
+            </Button>
+            <Button variant="primary" className="text-primary" to="signup">
+              {t("signUp")}
+            </Button>
+          </div>
+          }
+
           </nav>
 
           <div className="">

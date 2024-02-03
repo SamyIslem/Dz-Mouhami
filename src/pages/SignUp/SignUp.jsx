@@ -62,7 +62,12 @@ const SignUp = () => {
       setLoading(false);
       toast.dismiss(toastId);
       toast.success(response);
+<<<<<<< HEAD
       selectedOption === 'lawyer' ? navigate('/lawyer/dashboard') : navigate('/')
+=======
+      selectedOption === 'lawyer' ? navigate('/signupdetails') : navigate('/')
+      localStorage.setItem('lawyer_id', 5);
+>>>>>>> 496641d4a0c2f4ca7b42ab1b87f761f494e2c2d1
     } catch (error) {
       setLoading(false);
       toast.dismiss(toastId);
