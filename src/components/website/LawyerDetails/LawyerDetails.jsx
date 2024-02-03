@@ -2,7 +2,8 @@ import React, { useState } from "react";
 import { useTranslation } from "react-i18next";
 import { Experience } from "../Experience";
 import { Tarifications } from "../Tarifications";
-
+import Disponibilites from "../Disponibilites/Disponibilites";
+import Avis from "../Avis/Avis";
 const LawyerDetails = ({ lawyer, ...props }) => {
   const { t } = useTranslation();
 
@@ -54,6 +55,8 @@ const LawyerDetails = ({ lawyer, ...props }) => {
 
       {selected == 1 && <Experience lawyer={lawyer} />}
       {selected == 2 && <Tarifications lawyer={lawyer} />}
+      {selected == 3 && <Disponibilites />}
+      {selected == 4 && <Avis />}
     </div>
   );
 };

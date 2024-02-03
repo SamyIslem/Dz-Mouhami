@@ -1,0 +1,14 @@
+#Dockerfile for Backend
+
+FROM python:3.9-slim  # Base image: Python environment
+
+WORKDIR /app  # Set working directory
+
+COPY requirements.txt requirements.txt  # Copy requirements file
+RUN pip install -r requirements.txt  # Install Python dependencies
+
+COPY . .  # Copy remaining project files
+
+EXPOSE 8000  # Expose port for backend server
+
+CMD ["python", "manage.py", "runserver", "0.0.0.0:8000"]  # Start Django server

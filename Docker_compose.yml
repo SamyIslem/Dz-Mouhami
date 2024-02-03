@@ -1,0 +1,31 @@
+#Docker Compose 
+
+version: '3.8'  # Docker Compose file version
+
+services:  # Define services (containers)
+  backend:
+    build: ./backend  # Build backend image from Dockerfile
+    volumes:
+      - ./backend:/app  # Mount local code for live updates
+    ports:
+      - "8000:8000"  # Map port 8000
+    depends_on:
+      - db  # Wait for database
+
+  frontend:
+    build: ./frontend  # Build frontend image from Dockerfile
+    ports:
+      - "3000:3000"  # Map port 3000
+
+  db:
+    image: mysql:5.7  # Use MySQL image
+    environment:  # Set environment variables for database
+      - MYSQL_ROOT_PASSWORD=root
+      - MYSQL_DATABASE=db_name
+      - MYSQL_USER=root
+      - MYSQL_PASSWORD=root
+    volumes:
+      - db_data:/var/lib/mysql  # Persist database data
+
+volumes:  # Define named volumes
+  db_data:
